@@ -1,0 +1,24 @@
+<p>fetched-table works!</p>
+<!-- <p >{{apidata[5].title}}</p> -->
+<table class="table table-bordered styled-table" >
+    <thead>
+      <tr>
+        <th>UserId</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of apidata">
+        <td> {{item.userId}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.body}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+<!-- <li *ngFor="let user of apidata; index as i; first as isFirst">
+    {{i}}/{{apidata.length}}. {{user.title}} 
+  </li> -->

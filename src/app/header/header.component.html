@@ -1,0 +1,12 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">AngularAssignment</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li [ngClass]="onTable ? 'active' : ''" (click)="clickOnTable()"><a routerLink="/table">Table</a></li>
+        <li [ngClass]="onForm ? 'active' : ''" (click)="clickOnForm()"><a routerLink="/employee-form">Employee Form</a></li>
+
+      </ul>
+    </div>
+  </nav>

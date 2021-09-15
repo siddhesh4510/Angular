@@ -1,0 +1,51 @@
+ 
+  
+  <div class="container-fluid form-table" >
+      <form #employeeForm="ngForm"> 
+
+        <div class="form-group">
+            <label>Name</label>
+            <input type="name" required #name="ngModel" pattern="^[a-zA-Z ]+$"  class="form-control " placeholder="Enter Name" name="name" [(ngModel)]="formModel.name">
+            <p *ngIf="name.touched && name.invalid" style="color:red">
+                Invalid name
+            </p>
+        </div>
+          
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" required #email="ngModel" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$"  class="form-control " placeholder="Enter Email" name="email" [(ngModel)]="formModel.email">
+            <p *ngIf="email.touched && email.invalid" style="color:red">
+                Invalid email
+            </p>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" required #phone="ngModel" pattern="^\d{10}$" class="form-control" placeholder="Enter Phone Number" name="mobile" [(ngModel)]="formModel.phone">
+            <p *ngIf="phone.touched && phone.invalid" style="color:red">
+                Invalid Mobile Number 
+            </p>
+        </div>
+
+        <div class="form-group">
+            <label>Date Of Birth</label>
+            <input type="date" required #dob="ngModel" pattern="^\d{4}-\d{2}-\d{2}$"  class="form-control " placeholder="Enter DOB" name="dob" [(ngModel)]="formModel.dob">
+            <p *ngIf="dob.touched && dob.invalid" style="color:red">
+                Enter proper date of birth or select from calender
+            </p>
+            
+        </div>
+
+        <div class="form-group">
+            <label>Address</label>
+            <textarea id="address" name="address" #address="ngModel" class="form-control" [(ngModel)]="formModel.address">Enter Here</textarea>
+            <p *ngIf="address.touched && (address.value=='' || address.value==null )" style="color:red">
+                Enter Address
+            </p>
+        </div>
+            
+        <button [disabled]="!(employeeForm.form.valid && !(address.value=='' || address.value==null )) " type="submit" class="btn btn-primary" (click)=submitInformation(employeeForm)>Submit </button>
+        
+      </form>
+  </div>
+

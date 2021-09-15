@@ -1,0 +1,10 @@
+.form-table{
+    margin:200px;
+}
+@media only screen and (max-width: 767px) {
+        .form-table{
+        margin-top:250px;
+        margin-left: 0px;
+        margin-right:0px;
+    }
+  }
