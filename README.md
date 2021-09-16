@@ -1,5 +1,7 @@
 # Assignment
 
+#Pagination has been added
+
 1.Download and extract zip folder .
 
 2.Open cmd or terminal in that folder and type     $ ***npm install***
