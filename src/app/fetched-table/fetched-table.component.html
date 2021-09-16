@@ -1,6 +1,11 @@
 <p>fetched-table works!</p>
 <!-- <p >{{apidata[5].title}}</p> -->
-<table class="table table-bordered styled-table" >
+<div class="styled-table">
+  <ul class="pagination pagination-style">
+
+    <li *ngFor="let item of paginationArray" (click)="onPagination(item)" ><a> {{item}} </a></li>
+  </ul>
+<table class="table table-bordered " >
     <thead>
       <tr>
         <th>UserId</th>
@@ -10,7 +15,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of apidata">
+      <tr *ngFor="let item of displaydata">
         <td> {{item.userId}}</td>
         <td>{{item.id}}</td>
         <td>{{item.title}}</td>
@@ -19,6 +24,4 @@
       
     </tbody>
   </table>
-<!-- <li *ngFor="let user of apidata; index as i; first as isFirst">
-    {{i}}/{{apidata.length}}. {{user.title}} 
-  </li> -->
+</div>
