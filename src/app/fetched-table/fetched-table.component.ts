@@ -18,7 +18,7 @@ export class FetchedTableComponent implements OnInit {
       this.apidata = data;
       this.displaydata=this.apidata.slice(0,10);
       this.paginationArray=Array.from({length: this.apidata.length/10}, (_, i) => i + 1)
-      console.log(this.paginationArray)
+      //console.log(this.paginationArray)
       
     }
     )
